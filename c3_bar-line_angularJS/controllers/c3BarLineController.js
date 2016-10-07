@@ -73,7 +73,20 @@ function c3BarLineController($scope) {
                 //inverted: true
                 //center: 0
             }
+        },
+        regions: [
+            {axis: 'x', end: 6, class: 'regionX'} // @ region.css : .c3-region.regionX {fill: red;}
+        ],
+        legend: {
+            //hide: ['data1']
+            position: 'right' // bottom right inset
+        },
+        point: {
+             show: false
         }
+        /*subchart: {
+            show: true
+        }*/
     });
 }
 
