@@ -7,8 +7,8 @@ function c3BarLineController($scope) {
         bindto: '#chart',
         data: {
             columns: [
-                ['data1', 30, 200, 100, 400, 150, 200],
-                ['data2', 30, 200, 100, 400, 150, 200]
+                ['data1', 60, 200, 100, 150, 150, 140],
+                ['data2', 60, 200, 100, 150, 150, 140]
             ],
             names: {
                 data1: 'goodman'
@@ -45,7 +45,33 @@ function c3BarLineController($scope) {
         },
         grid: {
             y: {
-                lines: [{value:300}]
+                lines: [
+                    {value:120, text: 'line 1'},
+                    {value:140, text: 'line 2'},
+                ]
+            }
+        },
+        axis: {
+            //rotated: true,
+            x: {
+                //show: false
+                type: 'category',
+                categories: ['fg', 'pc','ps','sr','cm'],
+                padding: {
+                    //left: 2
+                },
+                height: 0, // 0 ~
+                //extent: [0,2]
+                label: 'X Axis',
+                //show: false=
+            },
+            y:{
+                max: 150,
+                min: 60,
+                label: 'Y Axis',
+                inner: true,
+                //inverted: true
+                //center: 0
             }
         }
     });
